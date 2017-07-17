@@ -1,12 +1,10 @@
 {
   "name": "ui-kit",
   "version": "1.10.0",
-  "private": true,
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
-  "private": true, 
   "devDependencies": {
     "@storybook/react": "^3.1.8",
     "babel-cli": "^6.18.0",
