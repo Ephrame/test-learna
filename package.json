@@ -1,0 +1,45 @@
+{
+  "name": "ui-kit",
+  "version": "1.10.0",
+  "private": true,
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "private": true, 
+  "devDependencies": {
+    "@storybook/react": "^3.1.8",
+    "babel-cli": "^6.18.0",
+    "babel-preset-react-app": "2.0.1",
+    "lerna": "^2.0.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.1.0"
+  },
+  "scripts": {
+    "start": "sh ./scripts/build.sh",
+    "build:js": "NODE_ENV=production babel src --out-dir build",
+    "build:css": "postcss -u postcss-import -u postcss-cssnext -o build/selectively.css src/index.css",
+    "build": "npm run build:js && npm run build:css",
+    "deploy": "sh ./scripts/deploy.sh",
+    "deploy:stage": "sh ./scripts/deployStage.sh",
+    "test": "",
+    "eject": "",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@kadira/storybook-addon-options": "^1.0.2",
+    "@storybook/addon-info": "^3.1.9",
+    "@storybook/addon-options": "^3.1.6",
+    "@storybook/cli": "^3.1.6",
+    "animate.css": "^3.5.2",
+    "babel-plugin-react-docgen": "^1.5.0",
+    "babel-preset-react": "^6.24.1",
+    "material-ui": "^0.16.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-geosuggest": "^2.0.0",
+    "reselect": "^2.5.4"
+  }
+}
