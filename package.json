@@ -16,12 +16,13 @@
   },
   "scripts": {
     "start": "sh ./scripts/build.sh",
-    "build:js": "NODE_ENV=production babel src --out-dir build",
+    "build:js": "NODE_ENV=production babel packages --out-dir build",
     "build:css": "postcss -u postcss-import -u postcss-cssnext -o build/selectively.css src/index.css",
-    "build": "npm run build:js && npm run build:css",
+    "build": "npm run build:js",
     "deploy": "sh ./scripts/deploy.sh",
     "deploy:stage": "sh ./scripts/deployStage.sh",
     "test": "",
+    "lerna:exec": "lerna build && lerna publish",
     "eject": "",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
