@@ -22,7 +22,7 @@
     "deploy": "sh ./scripts/deploy.sh",
     "deploy:stage": "sh ./scripts/deployStage.sh",
     "test": "",
-    "lerna:exec": "lerna build && lerna publish",
+    "lerna:exec": "lerna build && git add . && git commit -m 'new version' && git push --force && lerna publish",
     "eject": "",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
