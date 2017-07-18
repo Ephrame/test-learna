@@ -1,12 +1,11 @@
 {
   "name": "button",
-  "version": "4.0.0",
-  "description": "YoYo nouveau again",
+  "version": "3.0.0",
+  "description": "YoYo nouveau again again",
   "keywords": [
     "from",
     "button"
   ],
-  "private": true,
   "main": "index.js",
   "scripts": {
     "build:js": "NODE_ENV=production babel component.js --out-file index.js",
